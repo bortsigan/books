@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Feature" tests="47" assertions="216" errors="0" failures="0" skipped="0" time="0.280464">
+    <testsuite name="Tests\Feature\BookListTest" file="/var/www/html/books/tests/Feature/BookListTest.php" tests="8" assertions="104" errors="0" failures="0" skipped="0" time="0.165265">
+      <testcase name="testResponseStructure" class="Tests\Feature\BookListTest" classname="Tests.Feature.BookListTest" file="/var/www/html/books/tests/Feature/BookListTest.php" line="14" assertions="76" time="0.106252"/>
+      <testcase name="testListWithoutFilters" class="Tests\Feature\BookListTest" classname="Tests.Feature.BookListTest" file="/var/www/html/books/tests/Feature/BookListTest.php" line="68" assertions="2" time="0.011666"/>
+      <testcase name="testTitleFilter" class="Tests\Feature\BookListTest" classname="Tests.Feature.BookListTest" file="/var/www/html/books/tests/Feature/BookListTest.php" line="88" assertions="4" time="0.004204"/>
+      <testcase name="testAuthorsFilter" class="Tests\Feature\BookListTest" classname="Tests.Feature.BookListTest" file="/var/www/html/books/tests/Feature/BookListTest.php" line="105" assertions="6" time="0.007313"/>
+      <testcase name="testTitleSort" class="Tests\Feature\BookListTest" classname="Tests.Feature.BookListTest" file="/var/www/html/books/tests/Feature/BookListTest.php" line="136" assertions="4" time="0.004989"/>
+      <testcase name="testPublishedYearSort" class="Tests\Feature\BookListTest" classname="Tests.Feature.BookListTest" file="/var/www/html/books/tests/Feature/BookListTest.php" line="153" assertions="4" time="0.005063"/>
+      <testcase name="testAvgReviewSort" class="Tests\Feature\BookListTest" classname="Tests.Feature.BookListTest" file="/var/www/html/books/tests/Feature/BookListTest.php" line="170" assertions="4" time="0.006318"/>
+      <testcase name="testPagination" class="Tests\Feature\BookListTest" classname="Tests.Feature.BookListTest" file="/var/www/html/books/tests/Feature/BookListTest.php" line="201" assertions="4" time="0.019460"/>
+    </testsuite>
+    <testsuite name="Tests\Feature\BookPostTest" file="/var/www/html/books/tests/Feature/BookPostTest.php" tests="25" assertions="75" errors="0" failures="0" skipped="0" time="0.079318">
+      <testcase name="testDenyGuestAccess" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/html/books/tests/Feature/BookPostTest.php" line="13" assertions="1" time="0.002818"/>
+      <testcase name="testDenyNonAdminUserAccess" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/html/books/tests/Feature/BookPostTest.php" line="27" assertions="1" time="0.002429"/>
+      <testcase name="testSuccessfulPost" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/html/books/tests/Feature/BookPostTest.php" line="44" assertions="7" time="0.006123"/>
+      <testsuite name="Tests\Feature\BookPostTest::testValidation" tests="22" assertions="66" errors="0" failures="0" skipped="0" time="0.067948">
+        <testcase name="testValidation with data set #0" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/html/books/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.003215"/>
+        <testcase name="testValidation with data set #1" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/html/books/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.003082"/>
+        <testcase name="testValidation with data set #2" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/html/books/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.003076"/>
+        <testcase name="testValidation with data set #3" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/html/books/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.003015"/>
+        <testcase name="testValidation with data set #4" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/html/books/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.003706"/>
+        <testcase name="testValidation with data set #5" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/html/books/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.003693"/>
+        <testcase name="testValidation with data set #6" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/html/books/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.003149"/>
+        <testcase name="testValidation with data set #7" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/html/books/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.003041"/>
+        <testcase name="testValidation with data set #8" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/html/books/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.003023"/>
+        <testcase name="testValidation with data set #9" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/html/books/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.003030"/>
+        <testcase name="testValidation with data set #10" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/html/books/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.003120"/>
+        <testcase name="testValidation with data set #11" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/html/books/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.003190"/>
+        <testcase name="testValidation with data set #12" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/html/books/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.003094"/>
+        <testcase name="testValidation with data set #13" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/html/books/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.003044"/>
+        <testcase name="testValidation with data set #14" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/html/books/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.002885"/>
+        <testcase name="testValidation with data set #15" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/html/books/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.002906"/>
+        <testcase name="testValidation with data set #16" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/html/books/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.003045"/>
+        <testcase name="testValidation with data set #17" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/html/books/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.002852"/>
+        <testcase name="testValidation with data set #18" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/html/books/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.002885"/>
+        <testcase name="testValidation with data set #19" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/html/books/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.002963"/>
+        <testcase name="testValidation with data set #20" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/html/books/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.002979"/>
+        <testcase name="testValidation with data set #21" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/html/books/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.002955"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="Tests\Feature\BookReviewTest" file="/var/www/html/books/tests/Feature/BookReviewTest.php" tests="14" assertions="37" errors="0" failures="0" skipped="0" time="0.035881">
+      <testcase name="testDenyGuestAccess" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/var/www/html/books/tests/Feature/BookReviewTest.php" line="14" assertions="1" time="0.002178"/>
+      <testcase name="testError404OnInvalidBookId" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/var/www/html/books/tests/Feature/BookReviewTest.php" line="26" assertions="1" time="0.002546"/>
+      <testcase name="testSuccessfulPost" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/var/www/html/books/tests/Feature/BookReviewTest.php" line="40" assertions="6" time="0.003112"/>
+      <testcase name="testSuccessfulDelete" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/var/www/html/books/tests/Feature/BookReviewTest.php" line="73" assertions="1" time="0.002856"/>
+      <testcase name="test404NotFoundDelete" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/var/www/html/books/tests/Feature/BookReviewTest.php" line="89" assertions="1" time="0.002310"/>
+      <testsuite name="Tests\Feature\BookReviewTest::testValidation" tests="9" assertions="27" errors="0" failures="0" skipped="0" time="0.022879">
+        <testcase name="testValidation with data set #0" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/var/www/html/books/tests/Feature/BookReviewTest.php" line="103" assertions="3" time="0.002570"/>
+        <testcase name="testValidation with data set #1" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/var/www/html/books/tests/Feature/BookReviewTest.php" line="103" assertions="3" time="0.002563"/>
+        <testcase name="testValidation with data set #2" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/var/www/html/books/tests/Feature/BookReviewTest.php" line="103" assertions="3" time="0.002572"/>
+        <testcase name="testValidation with data set #3" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/var/www/html/books/tests/Feature/BookReviewTest.php" line="103" assertions="3" time="0.002590"/>
+        <testcase name="testValidation with data set #4" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/var/www/html/books/tests/Feature/BookReviewTest.php" line="103" assertions="3" time="0.002539"/>
+        <testcase name="testValidation with data set #5" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/var/www/html/books/tests/Feature/BookReviewTest.php" line="103" assertions="3" time="0.002479"/>
+        <testcase name="testValidation with data set #6" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/var/www/html/books/tests/Feature/BookReviewTest.php" line="103" assertions="3" time="0.002474"/>
+        <testcase name="testValidation with data set #7" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/var/www/html/books/tests/Feature/BookReviewTest.php" line="103" assertions="3" time="0.002550"/>
+        <testcase name="testValidation with data set #8" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/var/www/html/books/tests/Feature/BookReviewTest.php" line="103" assertions="3" time="0.002542"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>
