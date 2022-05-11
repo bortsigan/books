@@ -14,6 +14,8 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/books', 'BooksController@index');
-Route::post('/books', 'BooksController@store')->middleware('auth.admin');
-Route::post('/books/{id}/reviews', 'BooksReviewController@store')->middleware('auth.admin');
-Route::delete('/books/{bookId}/reviews/{reviewId}', 'BooksReviewController@destroy')->middleware('auth.admin');
+Route::group(['middleware' => 'auth.admin'], function () {
+    Route::post('/books', 'BooksController@store');
+	Route::post('/books/{id}/reviews', 'BooksReviewController@store');
+	Route::delete('/books/{bookId}/reviews/{reviewId}', 'BooksReviewController@destroy');
+});

@@ -16,9 +16,9 @@ use Illuminate\Support\Facades\DB;
 
 class BooksReviewController extends Controller
 {
-    private BookReview $bookReview;
+    private $bookReview;
 
-    private Book $book;
+    private $book;
 
     public function __construct(BookReview $bookReview, Book $book)
     {

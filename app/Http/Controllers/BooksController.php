@@ -18,11 +18,11 @@ class BooksController extends Controller
 {
     const DEFAULT_PAGE = 15;
 
-    private Book $book;
+    private $book;
 
-    private BookReview $bookReview;
+    private $bookReview;
 
-    private Author $author;
+    private $author;
     
     public function __construct(Book $book, BookReview $bookReview, Author $author)
     {
@@ -65,17 +65,22 @@ class BooksController extends Controller
 
     public function store(PostBookRequest $request)
     {
-        $book = new Book();
+        DB::beginTransaction();
+        try {
+            $book = new Book();
 
-        $book->isbn = $request->input('isbn');
-        $book->title = $request->input('title');
-        $book->description = $request->input('description');
-        $book->published_year = $request->input('published_year');
-        $book->save();
-        
-        $book->authors()->sync($request->input('authors'));
+            $book->isbn = $request->input('isbn');
+            $book->title = $request->input('title');
+            $book->description = $request->input('description');
+            $book->published_year = $request->input('published_year');
+            $book->save();
+            
+            $book->authors()->sync($request->input('authors'));
 
-        return new BookResource($book);
+            return new BookResource($book);
+        } catch (Exception $e) {
+            return response($e->getMessage(), 422);
+        }
     }
 
 }
