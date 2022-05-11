@@ -32,16 +32,23 @@ class BooksReviewController extends Controller
     {
         $this->findBookById($bookId);
 
-        $bookReview = new BookReview();
+        DB::beginTransaction();
 
-        $bookReview->book_id = $bookId;
-        $bookReview->user_id = auth()->user()->id;
-        $bookReview->review = $request->input('review');
-        $bookReview->comment = $request->input('comment');
+        try {
+            $bookReview = new BookReview();
+            $bookReview->book_id = $bookId;
+            $bookReview->user_id = auth()->user()->id;
+            $bookReview->review = $request->input('review');
+            $bookReview->comment = $request->input('comment');
+            $bookReview->save();
 
-        $bookReview->save();
+            DB::commit();
 
-        return new BookReviewResource($bookReview);
+            return new BookReviewResource($bookReview);
+
+        } catch(Exception $e) {
+            return abort(422);
+        }
     }
 
     public function destroy(int $bookId, int $reviewId, Request $request)

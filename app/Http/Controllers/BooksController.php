@@ -68,18 +68,18 @@ class BooksController extends Controller
         DB::beginTransaction();
         try {
             $book = new Book();
-
             $book->isbn = $request->input('isbn');
             $book->title = $request->input('title');
             $book->description = $request->input('description');
             $book->published_year = $request->input('published_year');
             $book->save();
-            
             $book->authors()->sync($request->input('authors'));
+            
+            DB::commit();
 
             return new BookResource($book);
         } catch (Exception $e) {
-            return response($e->getMessage(), 422);
+            return abort(422);
         }
     }
 

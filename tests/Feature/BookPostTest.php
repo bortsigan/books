@@ -89,7 +89,6 @@ class BookPostTest extends TestCase
         $response = $this
             ->actingAs($user)
             ->postJson('/api/books', $data);
-
         $response->assertStatus(422);
         $response->assertJsonValidationErrors([$invalidParameter]);
     }
