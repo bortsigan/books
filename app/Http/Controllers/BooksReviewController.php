@@ -33,7 +33,6 @@ class BooksReviewController extends Controller
         $this->findBookById($bookId);
 
         DB::beginTransaction();
-
         try {
             $bookReview = new BookReview();
             $bookReview->book_id = $bookId;
@@ -45,7 +44,6 @@ class BooksReviewController extends Controller
             DB::commit();
 
             return new BookReviewResource($bookReview);
-
         } catch(Exception $e) {
             return abort(422);
         }
@@ -54,7 +52,6 @@ class BooksReviewController extends Controller
     public function destroy(int $bookId, int $reviewId, Request $request)
     {
         $this->findBookById($bookId);
-
         $this->bookReview->destroy($reviewId);
 
         return response()->noContent();
