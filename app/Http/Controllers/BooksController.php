@@ -79,6 +79,7 @@ class BooksController extends Controller
 
             return new BookResource($book);
         } catch (Exception $e) {
+            DB::rollback();
             return abort(422);
         }
     }
