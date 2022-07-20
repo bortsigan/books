@@ -40,11 +40,12 @@ class BooksReviewController extends Controller
             $bookReview->review = $request->input('review');
             $bookReview->comment = $request->input('comment');
             $bookReview->save();
-
+            
             DB::commit();
-
             return new BookReviewResource($bookReview);
+            
         } catch(Exception $e) {
+            DB::rollback();
             return abort(422);
         }
     }
